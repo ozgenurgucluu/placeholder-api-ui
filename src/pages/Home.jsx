@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, } from "react-router-dom";
 import axios from "axios";
-
 
 const Home = () => {
   const [userList, setUserList] = useState([]);
@@ -16,12 +15,10 @@ const Home = () => {
       .then((response) => {
         setUserList(response.data);
       });
-    console.log(userList);
   };
- 
-
+  
   return (
-    <div className="container  max-w-[960px] flex flex-col mx-auto my-12 p-9">
+    <div className="container  max-w-[960px] flex flex-col mx-auto my-9 p-9">
       <h1 className="mx-auto font-bold">USERS({userList.length})</h1>
       <div className=" grid grid-cols-3 gap-5 overflow-hidden my-16">
         {userList.map((user, index) => (
@@ -30,7 +27,6 @@ const Home = () => {
             key={index}
             className="aspect-[3/2] bg-gray-300 border hover:border-slate-700 rounded-lg p-6 opacity-75 hover:opacity-100 mx-left font-semibold"
           >
-           
             <div className="flex flex-col">
               <img
                 src={`https://api.dicebear.com/7.x/adventurer/svg?seed=${user.username}`}
