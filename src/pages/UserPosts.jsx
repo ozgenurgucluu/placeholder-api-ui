@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
+import classNames from "classnames";
 
 const UserPosts = () => {
   const params = useParams();
   const [userPosts, setUserPosts] = useState([]);
+  const location = useLocation();
 
   const getPosts = () => {
     axios
@@ -17,12 +20,15 @@ const UserPosts = () => {
     getPosts(), [];
   });
   return (
-    <div className="mx-28 flex bg-slate-300 rounded-md">
-      <div className=" h-min[30px] ">
+    <div className="mx-28 flex bg-slate-300 rounded-lg ">
+      <div className=" h-min[30px] gap-3">
         {userPosts.map((post) => (
-          <div key={post.id} className="border border-black/15 h-min[30px] p-3">
-            <h2 className="font-bold">{post.title}</h2>
-            <p>{post.body}</p>
+          <div className="border border-black/15 h-min[30px] p-6 rounded-lg">
+            <Link key={post.id} to={`/user/${params.userId}/post/${post.id}`} >
+              <h2 className="font-bold text-blue-600 my-2">{post.title}</h2>
+              <p className="text-cyan-950">{post.body}</p>
+            </Link>
+
           </div>
         ))}
       </div>
