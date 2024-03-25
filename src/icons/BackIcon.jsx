@@ -3,7 +3,7 @@ import React from 'react'
 const BackIcon = () => {
   return (
     <div>
-      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="11px" height="20px" className='h-[35px] w-[35px] p-1' viewBox="0 0 11 20" version="1.1">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="11px" height="20px" className='mx-4 h-[35px] w-[35px] p-1' viewBox="0 0 11 20" version="1.1">
     
     <title>arrow_back_ios</title>
     <desc>Created with Sketch.</desc>

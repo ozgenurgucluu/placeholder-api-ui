@@ -17,8 +17,8 @@ const UserPosts = () => {
       });
   };
   useEffect(() => {
-    getPosts(), [];
-  });
+    getPosts();
+  } ,[]);
   return (
     <div className="mx-28 flex bg-slate-300 rounded-lg ">
       <div className=" h-min[30px] gap-3">

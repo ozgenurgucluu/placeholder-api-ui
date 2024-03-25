@@ -7,7 +7,7 @@ const UserDetail = () => {
  
 
   return (
-    <div className='container  max-w-screen flex flex-col mx-auto my-6 p-9 gap-3'>
+    <div className='container  max-w-screen flex flex-col mx-auto my-6 p-9 gap-3 '>
       <UserInfo/>
       <UserMedia/>
       <Outlet/>
