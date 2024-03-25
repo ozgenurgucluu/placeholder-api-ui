@@ -31,13 +31,13 @@ const UserAlbums = () => {
     albums && (
       <div className=" flex flex-col mx-28  bg-slate-300 rounded-xl">
         <div className="flex">
-          <div className="p-7 font-bold text-lg text-blue-500">
+          <div className="mx-16 p-7 font-bold text-lg text-blue-500">
             ALBUMS ({albums.length})
           </div>
         </div>
-        <div className="grid grid-cols-3 mx-16 p-6 gap-6 -my-6 pb-10 ">
+        <div className="grid grid-cols-3 mx-16 p-7 gap-6 -my-6 pb-10 ">
           {albums.map((album) => (
-            <div className="min-aspect-[3/2] borderborder-blue-300 rounded-2xl bg-slate-500 p-10 text-white font-semibold ">
+            <div className="min-aspect-[3/2]  bg-blue-500 rounded-lg text-whitep-10 p-10 text-white font-semibold ">
               <Link
                 key={album.id}
                 to={`/user/${params.userId}/albums/${album.id}`}

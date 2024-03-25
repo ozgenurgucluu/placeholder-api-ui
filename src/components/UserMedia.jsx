@@ -28,7 +28,7 @@ const UserMedia = () => {
             menu.map((link,index)=>(
                 <Link key={index} to={link.to} className={classNames("px-6 py-2 border border-gray-400 rounded-full",
                 {
-                  "font-bold text-white bg-blue-500 ": location.pathname == link.to,
+                  "font-bold text-white bg-blue-500 ": (location.pathname.startsWith(link.to)&& link.to!= `/user/${params.userId}`)|| location.pathname==link.to
                 })}><span>{link.text}</span></Link>
             ))
         }
