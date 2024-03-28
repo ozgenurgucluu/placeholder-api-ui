@@ -29,15 +29,15 @@ const UserTodos = () => {
   }, []);
   return (
     todos && (
-      <div className=" mx-28 flex flex-col bg-slate-300 rounded-md p-6">
-        <div className="flex flex-col gap-2 mx-auto min-w-[390px] p-5  ">
+      <div className=" mx-28 flex flex-col bg-slate-300 rounded-md p-6 dark:bg-gray-500 ">
+        <div className="flex flex-col gap-2 mx-auto min-w-[390px] p-5 ">
           {todos.map((todo) => (
             <div
               key={todo.id}
-              className="border border-white bg-blue-500 rounded-lg text-white p-4"
+              className="border border-white/50 bg-blue-500 dark:bg-slate-800 rounded-lg text-white p-4"
             >
               <div className="flex">
-                <span className="mx-3 text-[16px] font-semibold"> {todo.title}</span>
+                <span className="mx-3 text-[16px] font-semibold "> {todo.title}</span>
                 {todo.completed==true && <TickIcon/>}
               </div>
             </div>

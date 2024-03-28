@@ -22,7 +22,7 @@ const UserMedia = () => {
   ];
 
   return (
-    <div className="py-2  mx-28 flex border-t border-black/25 bg-slate-300 rounded-md">
+    <div className="py-2  mx-28 flex border-t border-black/25 bg-slate-300 rounded-md dark:bg-slate-400">
       <div className="flex mx-auto gap-16 ">
         {
             menu.map((link,index)=>(

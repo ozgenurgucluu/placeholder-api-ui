@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link, } from "react-router-dom";
+import { Link } from "react-router-dom";
 import axios from "axios";
 
 const Home = () => {
@@ -10,22 +10,27 @@ const Home = () => {
   }, []);
 
   const getUsers = () => {
-    axios
-      .get("https://jsonplaceholder.typicode.com/users")
-      .then((response) => {
-        setUserList(response.data);
-      });
+    axios.get("https://jsonplaceholder.typicode.com/users").then((response) => {
+      setUserList(response.data);
+    });
   };
-  
+
   return (
-    <div className="container  max-w-[960px] flex flex-col mx-auto my-9 p-9">
-      <h1 className="mx-auto font-bold">USERS({userList.length})</h1>
+    <div className=" dark:bg-darkColor container  max-w-[960px] flex flex-col mx-auto my-5 p-9">
+      <div className="flex">
+        <div className="flex mx-auto">
+          <h1 className=" font-bold dark:text-white">
+            USERS({userList.length})
+          </h1>
+        </div>
+      </div>
+
       <div className=" grid grid-cols-3 gap-5 overflow-hidden my-16">
         {userList.map((user, index) => (
           <Link
             to={`/user/${user.id}`}
             key={index}
-            className="aspect-[3/2] bg-gray-300 border hover:border-slate-700 rounded-lg p-6 opacity-75 hover:opacity-100 mx-left font-semibold"
+            className="aspect-[3/2] bg-gray-300 border dark:bg-gray-500 dark:hover:bg-slate-400 dark:text-white hover:border-slate-700 rounded-lg p-6 opacity-75 hover:opacity-100 mx-left font-semibold"
           >
             <div className="flex flex-col">
               <img

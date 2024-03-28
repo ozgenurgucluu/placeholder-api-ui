@@ -18,13 +18,13 @@ const PostDetail = () => {
   }, []);
   return (
     postDetail && (
-      <div className="mx-28 flex bg-slate-300 rounded-lg">
-        <Link to={ `/user/${params.userId}`} className="p-3">
+      <div className="mx-28 flex bg-slate-300 rounded-lg dark:bg-gray-500">
+        <Link to={`/user/${params.userId}`} className="p-3">
           <BackIcon />
         </Link>
         <div className="p-8 ">
           <h2 className="my-5 font-bold  text-blue-700">{postDetail.title}</h2>
-          <p className= " font-semibold text-gray-900">{postDetail.body}</p>
+          <p className=" font-semibold text-gray-900 dark:text-white">{postDetail.body}</p>
         </div>
       </div>
     )

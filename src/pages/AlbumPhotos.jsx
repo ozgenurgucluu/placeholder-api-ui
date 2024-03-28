@@ -10,11 +10,11 @@ const AlbumPhotos = () => {
   const [albumPhotos, setAlbumPhotos] = useState([]);
   const getAlbumPhotos = () => {
     axios
-      .get(`https://jsonplaceholder.typicode.com/photos?albumId=${params.albumId}`)
+      .get(
+        `https://jsonplaceholder.typicode.com/photos?albumId=${params.albumId}`
+      )
       .then((response) => {
         setAlbumPhotos(response.data);
-        
-        
       });
   };
   useEffect(() => {
@@ -22,17 +22,17 @@ const AlbumPhotos = () => {
   }, []);
   return (
     albumPhotos && (
-      <div className="flex flex-col mx-28  bg-slate-200 rounded-xl p-8 ">
-         <Link to={ `/user/${params.userId}/albums`} className="p-3">
+      <div className="flex flex-col mx-28  bg-slate-200 rounded-xl p-8  dark:bg-gray-500">
+        <Link to={`/user/${params.userId}/albums`} className="p-3">
           <BackIcon />
         </Link>
         <div className="grid grid-cols-3 mx-16 p-14 gap-6 -my-14 ">
           {albumPhotos.map((photo) => (
-            <div
-              key={photo.id}
-              className="min-aspect-[3/2] p-6 "
-            >
-              <img className="rounded-lg" src={`https://picsum.photos/200/200?random=${photo.id}`} />
+            <div key={photo.id} className="min-aspect-[3/2] p-6 ">
+              <img
+                className="rounded-lg"
+                src={`https://picsum.photos/200/200?random=${photo.id}`}
+              />
             </div>
           ))}
         </div>
