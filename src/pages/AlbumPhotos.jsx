@@ -28,7 +28,7 @@ const AlbumPhotos = () => {
         </Link>
         <div className="grid grid-cols-3 mx-16 p-14 gap-6 -my-14 ">
           {albumPhotos.map((photo) => (
-            <div key={photo.id} className="min-aspect-[3/2] p-6 ">
+            <div key={photo.id} className="min-aspect-[3/2] p-6  ">
               <img
                 className="rounded-lg"
                 src={`https://picsum.photos/200/200?random=${photo.id}`}
