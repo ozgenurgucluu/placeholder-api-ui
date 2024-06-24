@@ -1,4 +1,6 @@
 #Placeholder Api Ui
+![home-page](public/screenshots/home.png)
+![detail-page](public/screenshots/detail.png)
 
 
 
